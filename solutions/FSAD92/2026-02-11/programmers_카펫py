@@ -1,0 +1,18 @@
+"""
+그림만 그리다 시간 안에 풀지 못함...
+
+비에트의 정리를 역이용하면 이차 방정식의 두 근의 곱과 합을 이용, 근의 공식으로 도출할 수도 있음
+하지만 그렇게 안 함
+"""
+
+def solution(brown, yellow):
+    # yellow = yellow_h * yellow_w
+    # yellow_h를 1부터 yellow의 제곱근까지 탐색
+    for yellow_h in range(1, int(yellow ** 0.5) + 1):
+        if yellow % yellow_h == 0:
+            yellow_w = yellow // yellow_h
+            
+            if (yellow_w + yellow_h) * 2 + 4 == brown:      # 노란색과 맞닿은 면의 개수를 세고 모서리를 4개 더함
+                return [yellow_w + 2, yellow_h + 2]
+    
+    return []
