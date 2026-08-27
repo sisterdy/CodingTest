@@ -1,0 +1,15 @@
+"""
+기존 문제는 위에서 아래, 이번에는 아래에서 위로.
+"""
+def solution(triangle):
+    # 맨 아래 행은 어차피 이미 더 내려갈 곳이 없기에
+    # 맨 아래 바로 위 행부터 시작
+    for i in range(len(triangle) - 2, -1, -1):
+        # 현재 행 순회하며 좌우 중 더 큰 놈을 선택
+        for j in range(len(triangle[i])):
+            triangle[i][j] += max(
+                triangle[i + 1][j],
+                triangle[i + 1][j + 1]
+            )
+
+    return triangle[0][0]
