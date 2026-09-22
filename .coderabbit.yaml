@@ -1,0 +1,21 @@
+language: "ko-KR"
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "**/*"
+      instructions: >
+        버그, 엣지 케이스, 잠재적 오류를 우선적으로 지적하세요.
+        가독성/효율성/네이밍 개선점은 간단히 덧붙이세요.
+        지금 코드보다 더 나은 대안이 없다면 다른 말 없이 "LGTM"만 남기세요.
+
+chat:
+  auto_reply: true
