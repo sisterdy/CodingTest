@@ -12,7 +12,7 @@ PR_NUMBER = os.environ["PR_NUMBER"]
 BASE_SHA = os.environ["BASE_SHA"]
 HEAD_SHA = os.environ["HEAD_SHA"]
 
-MODEL = "gemini-2.0-flash"
+MODEL = "gemini-3.6-flash"
 MAX_DIFF_CHARS = 60000
 
 
